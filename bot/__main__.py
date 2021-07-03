@@ -29,22 +29,21 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>Bot Uptime ⌚:</b> {currentTime}\n' \
-            f'<b>Total disk space🗄️:</b> {total}\n' \
-            f'<b>Used 🗃️:</b> {used}  ' \
-            f'<b>Free 🗃️:</b> {free}\n\n' \
-            f'📇Data Usage📇\n<b>Uploaded :</b> {sent}\n' \
-            f'<b>Downloaded:</b> {recv}\n\n' \
-            f'<b>CPU 🖥️:</b> {cpuUsage}% ' \
-            f'<b>RAM ⛏️:</b> {memory}% ' \
-            f'<b>Disk 🗄️:</b> {disk}%'
+    stats = f'<b>╭───「  💥 BOT STATUS 💥  」</b>\n' \
+            f'<b>│</b>\n' \
+            f"<b>├  ⏰ Bot Uptime : {hr} : {mi} : {se}</b>\n" \
+            f'<b>├  💾 Total Disk Space : {total}</b>\n' \
+            f'<b>├  📀 Total Used Space : {used}</b>\n' \
+            f'<b>├  💿 Total Free Space : {free}</b>\n' \
+            f'<b>│</b>\n' \
+            f'<b>╰───「 🔥 DOPE MIRRORING 🔥 」</b>'
     sendMessage(stats, context.bot, update)
 
 
 def start(update, context):
     start_string = f'''
-This is a bot which can mirror all your links to Google drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+This bot can mirror all your nudes to Google Drive!
+Send your nudes to the bot to see how it works.
 '''
     sendMessage(start_string, context.bot, update)
 
