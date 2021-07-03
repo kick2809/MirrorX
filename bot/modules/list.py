@@ -16,7 +16,7 @@ def list_drive(update,context):
         if button:
             editMessage(msg, reply, button)
         else:
-            editMessage('No result found', reply, button)
+            editMessage('Nothing is there just like your brain lol', reply, button)
 
     except IndexError:
         sendMessage('send a search key along with command', context.bot, update)
